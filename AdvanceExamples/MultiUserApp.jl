@@ -96,7 +96,7 @@ end
 
 function ui(user)
     CSS * dashboard(
-        model(user), class="container", [
+        vm(model(user)), class="container", title = "Stipple x-y ApexChart", [
 
         heading("Demo Stipple App with multi-user and multi-client support"),
 
@@ -131,7 +131,7 @@ function ui(user)
         row(cell(class="st-module", plot(:plot_data; options=:plot_options))),
 
         footer(class="st-footer q-pa-md","Have some nicer footer here ...")
-    ], title = "Stipple x-y ApexChart")
+    ])
 end
 
 route("/") do
